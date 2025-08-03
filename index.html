@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="converter-wrapper">
+        <h1>Currency Converter</h1>
+        <div class="converter-container">
+            <div class="input-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" value="100" min="0">
+            </div>
+            <div class="currency-selection">
+                <div class="select-group">
+                    <label for="from-currency">From</label>
+                    <select id="from-currency"></select>
+                </div>
+                
+                <button id="swap-button" aria-label="Swap currencies">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.0001 11H4V13H16.0001V16L20.0001 12L16.0001 8V11ZM8.00005 3L4.00005 7L8.00005 11V8H20V6H8.00005V3Z"></path>
+                    </svg>
+                </button>
+                
+                <div class="select-group">
+                    <label for="to-currency">To</label>
+                    <select id="to-currency"></select>
+                </div>
+            </div>
+            
+            <div id="rate-display"></div>
+            <div id="result-display"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

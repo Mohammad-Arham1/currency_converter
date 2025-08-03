@@ -1,0 +1,127 @@
+:root {
+    --bg-color: #f4f7f9;
+    --card-bg: #ffffff;
+    --primary-color: #0066ff;
+    --text-color: #333;
+    --label-color: #666;
+    --border-color: #dce4e9;
+    --shadow-color: rgba(0, 50, 100, 0.1);
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.converter-wrapper {
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.converter-container {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+.input-group, .select-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--label-color);
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="number"]:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.2);
+}
+
+.currency-selection {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.currency-selection .select-group {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+#swap-button {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    transition: background-color 0.2s, transform 0.2s;
+    margin-bottom: 1px; /* Align with inputs */
+}
+
+#swap-button:hover {
+    background-color: var(--bg-color);
+    transform: rotate(180deg);
+}
+
+#swap-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+#rate-display {
+    font-size: 0.9rem;
+    color: var(--label-color);
+    height: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#result-display {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    height: 3.5rem;
+    word-wrap: break-word;
+}
